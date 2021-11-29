@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
+  get 'transactions/index'
+  get 'transactions/create'
+  get 'categories/index'
+  get 'categories/create'
+  devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

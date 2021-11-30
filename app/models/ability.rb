@@ -1,15 +1,12 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-
-    can :read, :all
+    # can :read, Category
 
     return unless user.present?
 
     can %i[read destroy create], Category, user: user
-    can %i[read destroy create], Transaction, user: user
+    can %i[read destroy create], Entity, user: user
   end
 end

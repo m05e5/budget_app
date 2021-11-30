@@ -5,14 +5,10 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new
-    if can? :create, @category
-      @category.user_id = current_user.id
-      @category.name = params[:name]
-      @category.icon = params[:icon]
-      redirect_to(root_path, notice: 'category created succesfully') if @recipe.save
-    else
-      redirect_to(request.env['HTTP_REFERER'], notice: 'you dont have access')
-    end
+    @category.user_id = current_user.id
+    @category.name = params[:name]
+    @category.icon = params[:icon]
+    redirect_to(root_path, notice: 'category created succesfully') if @category.save
   end
 
   def new; end

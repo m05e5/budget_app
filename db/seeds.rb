@@ -11,3 +11,9 @@ user.name = 'admin'
 user.email = 'admin@mail.com'
 user.password = '111111'
 user.save!
+
+user2 = User.new
+user2.name = 'admin2'
+user2.email = 'admin2@mail.com'
+user2.password = '111111'
+user2.save!

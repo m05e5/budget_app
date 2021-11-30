@@ -1,0 +1,25 @@
+<div class='form-page'>
+  <%= form_with model: @category, url: categories_create_path do |form|%>
+    <div class="form-container">
+      <h2>Create a new category</h2>
+      <div class='field'>
+        <%= form.label :name, 'Name' %>
+        <%= form.text_field :name, class: 'input' %>
+      </div>
+
+      <div class='field'>
+        <%= form.label :icon, 'Icon' %>
+        <%= form.file_field :icon%>
+      </div>
+
+      <div>
+        <%= form.submit "Submit", class: 'create-btn'%>
+      </div>
+      <div class='go-back'>
+        <a href= javascript:history.back() class='delete-btn'>
+          Go Back
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>

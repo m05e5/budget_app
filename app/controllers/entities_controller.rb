@@ -4,10 +4,8 @@ class EntitiesController < ApplicationController
     if can? :read, @category
       @entities = @category.category_with_entities.order(created_at: :desc)
       @total_amount = 0
-      if !@entities.nil?
-        @entities.each do |trans|
-          @total_amount += trans.entity.amount
-        end
+      @entities&.each do |trans|
+        @total_amount += trans.entity.amount
       end
       @total_amount
 
@@ -23,10 +21,11 @@ class EntitiesController < ApplicationController
     @entity.name = params[:name]
     @entity.amount = params[:amount]
     return unless @entity.save
-      category_with_entity = CategoryWithEntity.new
-      category_with_entity.category = @category
-      category_with_entity.entity = Entity.find(@entity.id)
-      redirect_to(root_path) if category_with_entity.save
+
+    category_with_entity = CategoryWithEntity.new
+    category_with_entity.category = @category
+    category_with_entity.entity = Entity.find(@entity.id)
+    redirect_to(root_path) if category_with_entity.save
   end
 
   def new

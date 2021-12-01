@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :icon, presence: true
 
   has_many :category_with_entities
   has_one_attached :icon

@@ -1,3 +1,106 @@
 // Place all the styles related to the Transactions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.entity {
+  display: flex;
+  background-color: white;
+  box-shadow: 2px 2px 3px rgb(236, 236, 236);
+  padding: 0 10px 0 10px;
+  width: 90vw;
+  max-width: 400px;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.back {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  color: white;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 10px;
+  color: black;
+  background-color: white;
+}
+
+
+/* styling of my modal ------------------------------------------ */
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  visibility: hidden;
+  background-color: rgba(100, 100, 100, 0.5);;
+}
+
+.modal {
+  border-radius: 10px;
+  display: flex;
+  width: 90vw;
+  height: 30vh;
+  position: fixed;
+  background-color: rgb(77, 77, 77);
+  z-index: 3;
+  flex-direction: column;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  font-size: 20px;
+  // overflow: scroll;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 85.3211009174312%;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-title {
+  font-size: 20px;
+  align-self: center;
+  color: white;
+  text-align: left;
+}
+
+.modal-body {
+  margin-left: 2rem;
+}
+
+.X {
+  // margin-left: auto;
+  // position: fixed;
+  // left: 55%;
+  // top: 12%;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+
+.down {
+  margin-top: 57px;
+}

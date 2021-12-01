@@ -19,12 +19,12 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
- .form-page {
+.form-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 85vh;
   background-color: rgb(245, 245, 245);
 }
 
@@ -34,7 +34,6 @@ body {
   align-items: center; */
   padding: 1rem;
   background-color: rgb(255, 255, 255);
-  /* padding: 2rem; */
   width: 75vw;
   border-radius: 10px;
   box-shadow: 2px 2px 3px rgb(206, 206, 206);
@@ -69,7 +68,6 @@ body {
   border: none;
   box-shadow: 2px 2px 3px rgb(206, 206, 206);
   border-radius: 5px;
-  margin-right: 1rem;
   padding: 6px 15px 6px 15px;
   margin: 5px 0 5px 0;
 }

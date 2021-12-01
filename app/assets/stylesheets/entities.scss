@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
 .entity {
   display: flex;
   background-color: white;
@@ -33,7 +32,6 @@
   background-color: white;
 }
 
-
 /* styling of my modal ------------------------------------------ */
 .modal-background {
   width: 100vw;
@@ -46,7 +44,7 @@
   justify-content: center;
   backdrop-filter: blur(4px);
   visibility: hidden;
-  background-color: rgba(100, 100, 100, 0.5);;
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 .modal {

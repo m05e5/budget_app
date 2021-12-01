@@ -1,4 +1,13 @@
 class CategoriesController < ApplicationController
+  # 
+
+  before_action :checking
+  # :authenticate_user!
+
+  def checking
+    redirect_to(welcome_path) unless user_signed_in? 
+  end
+
   def index
     @categories = Category.where(user_id: current_user.id).order(updated_at: :desc)
   end

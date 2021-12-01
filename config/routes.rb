@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome', to: 'splash#index'
   root to: 'categories#index'
   get 'categories/:category_id/entities', to: 'entities#index'
   get 'categories/new', to: 'categories#new'

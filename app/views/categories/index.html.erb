@@ -14,9 +14,14 @@
     <% @categories.each do |category|%>
       <div class='category'>
         <%= image_tag category.icon, class: 'cat_icon'%>
-        <a class='cat_name' href="categories/<%= category.id %>/entities">
-          <%= category.name%> 
-        </a>
+        <div class='cat_details'>
+          <a class='cat_name' href="categories/<%= category.id %>/entities">
+            <%= category.name%> 
+          </a>
+          <div class='cat_amount'> 
+            <%= category.total_amount%> $
+          </div>
+        </div>
       </div>
     <%end%>
 

@@ -3,11 +3,11 @@ class EntitiesController < ApplicationController
     @category = Category.find(params[:category_id])
     if can? :read, @category
       @entities = @category.category_with_entities.order(created_at: :desc)
-      @total_amount = 0
-      @entities&.each do |trans|
-        @total_amount += trans.entity.amount
-      end
-      @total_amount
+      @total_amount = @category.total_amount
+      # @entities&.each do |trans|
+      #   @total_amount += trans.entity.amount
+      # end
+      # @total_amount
 
     else
       redirect_to(root_path, notice: 'you dont have access')

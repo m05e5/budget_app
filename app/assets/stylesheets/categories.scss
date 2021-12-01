@@ -80,6 +80,14 @@
   width: 90px;
 }
 
+.cat_details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .cat_name {
   margin-top: 1rem;
   color: black;
@@ -87,4 +95,11 @@
   font-size: 20px;
   font-weight: 600;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cat_amount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }

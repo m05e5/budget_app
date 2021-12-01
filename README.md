@@ -3,6 +3,16 @@
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
 >this a mobile view app to manage finances, the user can create categories and add transactions to it. 
+
+|  wireframes |  |  |
+|-------|---------|------|
+|![image](https://user-images.githubusercontent.com/37901469/144277707-7c760f19-ff66-4327-8807-767038a851a2.png)|![image](https://user-images.githubusercontent.com/37901469/144279874-fbbb8bac-c4b2-4211-95b6-d62730d8c4f2.png)|![image](https://user-images.githubusercontent.com/37901469/144280039-fe6a8192-6935-4ba5-8723-519a51670bfe.png)|
+![image](https://user-images.githubusercontent.com/37901469/144281481-4ffc1918-db84-4449-a052-c1af118b976f.png)|![image](https://user-images.githubusercontent.com/37901469/144281145-7df934b9-e71c-4b38-9e3f-63e82eeec676.png)
+
+
+
+
+
 ## Built With
 
 - Ruby on Rails

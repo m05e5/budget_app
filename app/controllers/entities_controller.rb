@@ -19,11 +19,12 @@ class EntitiesController < ApplicationController
     @entity.name = params[:name]
     @entity.amount = params[:amount]
     if choose.nil?
-      flash.alert = "you have to pick atleast one category"
+      flash.alert = 'you have to pick atleast one category'
       redirect_to(entities_new_path)
     end
-    
+
     return unless @entity.save
+
     choose.each do |choice|
       category_with_entity = CategoryWithEntity.new
       category_with_entity.category = Category.find(choice)

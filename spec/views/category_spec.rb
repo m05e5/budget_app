@@ -14,5 +14,14 @@ RSpec.describe 'Category', type: :feature do
     it 'Is in the category view' do
       expect(page).to have_content('Categories')
     end
+
+    it 'can create a new category' do
+      visit categories_new_path
+      fill_in 'Name', with: 'Test Project'
+      click_button 'Submit'
+      expect(page).to have_current_path(root_path)
+      expect(page).to have_content('Test Project')
+      expect(page).to have_content('0 $')
+    end
   end
 end

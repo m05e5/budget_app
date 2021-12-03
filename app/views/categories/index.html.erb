@@ -13,17 +13,14 @@
 
     <% @categories.each do |category|%>
       <div class='category'>
-      <%if category.icon.attached? %>
         <%= image_tag category.icon, class: 'cat_icon'%>
-      <%else%>
-        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOYeuoelhM2iWeIjc--_YW3ZlqrFaIHOCqyQ&usqp=CAU' alt='No image' class= 'cat_icon'>
-      <%end%>
         <div class='cat_details'>
           <a class='cat_name' href="categories/<%= category.id %>/entities">
             <%= category.name%> 
           </a>
-          <div class='cat_amount'> 
-            <%= category.total_amount%> $
+          <div class='cat_div'> 
+            <p><%= category.created_at.strftime("%d %b %Y") %></p>
+            <p><%= category.total_amount%> $</p>
           </div>
         </div>
       </div>

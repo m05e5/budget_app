@@ -12,17 +12,25 @@ class EntitiesController < ApplicationController
   end
 
   def create
-    @category = Category.find(params[:cat])
+    # @category = Category.find(params[:cat])
+    choose = params[:choose]
     @entity = Entity.new
     @entity.user_id = current_user.id
     @entity.name = params[:name]
     @entity.amount = params[:amount]
+    if choose.nil?
+      flash.alert = "you have to pick atleast one category"
+      redirect_to(entities_new_path)
+    end
+    
     return unless @entity.save
-
-    category_with_entity = CategoryWithEntity.new
-    category_with_entity.category = @category
-    category_with_entity.entity = Entity.find(@entity.id)
-    redirect_to(root_path) if category_with_entity.save
+    choose.each do |choice|
+      category_with_entity = CategoryWithEntity.new
+      category_with_entity.category = Category.find(choice)
+      category_with_entity.entity = Entity.find(@entity.id)
+      category_with_entity.save
+    end
+    redirect_to(root_path)
   end
 
   def new

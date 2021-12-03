@@ -32,6 +32,13 @@
   background-color: white;
 }
 
+.checkdiv {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+
 /* styling of my modal ------------------------------------------ */
 .modal-background {
   width: 100vw;

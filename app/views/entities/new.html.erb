@@ -41,7 +41,13 @@
 
       <div class='field'>
          <%= form.label :cat, 'Select a category' %>
-          <%= form.collection_select :cat, @categories ,:id , :name %>
+          <%# <%= form.collection_select :cat, @categories ,:id , :name %>
+          <%@categories.each do |categ|%>
+          <div class='checkdiv'>
+            <%= form.label  categ.name %>
+            <%= check_box_tag "choose[]", categ.id %>
+          </div>
+          <%end%>
       </div>
 
       <div>

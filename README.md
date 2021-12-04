@@ -105,7 +105,5 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
+- Gregoire Vella on Behance
 
-## License
-
-[MIT](./LICENSE)

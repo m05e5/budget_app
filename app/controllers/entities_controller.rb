@@ -12,7 +12,6 @@ class EntitiesController < ApplicationController
   end
 
   def create
-    # @category = Category.find(params[:cat])
     choose = params[:choose]
     @entity = Entity.new
     @entity.user_id = current_user.id

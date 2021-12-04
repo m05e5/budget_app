@@ -41,7 +41,6 @@
 
       <div class='field'>
          <%= form.label :cat, 'Select a category' %>
-          <%# <%= form.collection_select :cat, @categories ,:id , :name %>
           <%@categories.each do |categ|%>
           <div class='checkdiv'>
             <%= form.label  categ.name %>
@@ -61,5 +60,3 @@
     <% end %>
   </div>
 </div>
-
-<%# <%= javascript_pack_tag 'modal_js' %> 

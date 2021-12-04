@@ -1,6 +1,5 @@
 class CategoriesController < ApplicationController
   before_action :checking
-  # :authenticate_user!
 
   def checking
     redirect_to(welcome_path) unless user_signed_in?

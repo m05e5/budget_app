@@ -18,7 +18,7 @@
   font-weight: 800;
   font-size: 18px;
   color: white;
-  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Proxima Nova Bold;
   padding-left: 5px;
   padding-right: 10px;
 }
@@ -68,7 +68,6 @@
   border-color: white;
   color: white;
   font-size: 20px;
-  // overflow: scroll;
 }
 
 .modal::-webkit-scrollbar {
@@ -97,10 +96,6 @@
 }
 
 .X {
-  // margin-left: auto;
-  // position: fixed;
-  // left: 55%;
-  // top: 12%;
   cursor: pointer;
 }
 

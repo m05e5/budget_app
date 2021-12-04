@@ -1,0 +1,33 @@
+<div class='container'>
+  <header class='header'>
+    <div class='header-space'>
+      
+    </div>
+    <div>
+      <h1 class='header-title'>Categories</h1>
+    </div>
+    <%= link_to("Logout", destroy_user_session_path, method: :delete, class: 'log-out')%>
+  </header>
+  <div class="content">
+    
+
+    <% @categories.each do |category|%>
+      <div class='category'>
+        <%= image_tag category.icon, class: 'cat_icon'%>
+        <div class='cat_details'>
+          <a class='cat_name' href="categories/<%= category.id %>/entities">
+            <%= category.name%> 
+          </a>
+          <div class='cat_div'> 
+            <p><%= category.created_at.strftime("%d %b %Y") %></p>
+            <p><%= category.total_amount%> $</p>
+          </div>
+        </div>
+      </div>
+    <%end%>
+
+  </div>
+  <footer class='footer'>
+    <%= link_to("Create Category", categories_new_path, class: 'bottom_create')%>
+  </footer>
+</div

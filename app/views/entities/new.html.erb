@@ -1,0 +1,62 @@
+<header class='header'>
+  <div>
+    <%= link_to" < ", root_path, class: 'back'%>
+  </div>
+  <div>
+    <h1 class='header-title'>creare transaction</h1>
+  </div>
+  <%= link_to("Logout", destroy_user_session_path, method: :delete, class: 'log-out')%>
+</header>
+<div class='form-page'>
+  <div class="modal-background">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Add a Category</h2>
+        <div class="X">
+          <p >X</p>
+        </div>
+      </div>
+      <div class='modal-body'>
+        <h3>Choose a category</h3>
+        <%= form_with  url: entities_add_cat_path do |form| %>
+          <%= form.label :category_list %>
+          <%= form.collection_select :category_list, @categories ,:id , :name %>
+          <%= form.submit "add", class: "create-btn" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="form-container">
+    <%= form_with model: @entity, url: entities_create_path do |form|%>
+      <h2>Create a new Transaction</h2>
+      <div class='field'>
+        <%= form.label :name, 'Name' %>
+        <%= form.text_field :name, class: 'input' %>
+      </div>
+
+      <div class='field'>
+        <%= form.label :amount, 'Amount($)' %>
+        <%= form.number_field :amount, class: 'input' %>
+      </div>
+
+      <div class='field'>
+         <%= form.label :cat, 'Select a category' %>
+          <%@categories.each do |categ|%>
+          <div class='checkdiv'>
+            <%= form.label  categ.name %>
+            <%= check_box_tag "choose[]", categ.id %>
+          </div>
+          <%end%>
+      </div>
+
+      <div>
+        <%= form.submit "Submit", class: 'create-btn'%>
+      </div>
+      <div class='go-back'>
+        <a href= javascript:history.back() class='delete-btn'>
+          Go Back
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

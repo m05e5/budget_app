@@ -1,0 +1,29 @@
+<div class='container'>
+  <header class='header'>
+    <div>
+      <%= link_to" < ", root_path, class: 'back'%>
+    </div>
+    <div>
+      <h1 class='header-title'>Transactions</h1>
+    </div>
+    <%= link_to("Logout", destroy_user_session_path, method: :delete, class: 'log-out')%>
+  </header>
+  <div class='total'>
+    <p>Total amount</p>
+    <p><%= @total_amount %> $</p>
+  </div>
+  <div class="content">
+
+    <% @entities.each do |entity|%>
+      <div class='entity'>
+        <p class='cat_name'> <%= entity.entity.name %></p>
+        <p class='cat_name'> <%= entity.entity.amount %>$ </p>
+      </div>
+    <%end%>
+    
+
+  </div>
+  <footer class='footer'>
+    <%= link_to("Create Transaction", entities_new_path, class: 'bottom_create')%>
+  </footer>
+</div
